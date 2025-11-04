@@ -1,40 +1,12 @@
+# Metal/ OpenGL Cross Platform Game Engine
 
-# Metal/ OpenGL Engine
+I started this project with the intention to visually recreate this two-dimensional classroom scene in a more realistic manner using three-dimensional graphics in an interactive environment to allow for a more surreal and interesting user experience. To accomplish this, I used shapes including spheres, planes, cubes, pyramids, rectangular prisms, and modified versions of these shapes. You can read about some of the process that I went through developing and improving this engine from my videos.
 
-I started this project with the intention to visually recreate this two-dimensional classroom scene in a more realistic manner using three-dimensional graphics in an interactive environment to allow for a more surreal and interesting user experience. To accomplish this, I used shapes including spheres, planes, cubes, pyramids, rectangular prisms, and modified versions of these shapes. You can read about some of the process that I went through developing and improving this engine at [sheraadams.github.io](https://sheraadams.github.io) and watch my video code review linked on that page. 
+![Game Engine](https://github.com/user-attachments/assets/4cc19615-6fe8-4652-839f-b2c7fb2bf1a3)
 
-The final engine with the Dear ImGui over lay is also [on YouTube](https://youtu.be/82KOBQVYH-I).
+The final engine with the Dear ImGui over lay is also [on YouTube](https://youtu.be/7Esz-Nlht9c).
 
-<div align="center">
-  <p>Before:</p>
-</div>
-    
-<div align="center">
-  <img src="https://github.com/sheraadams/C-OpenGL-Metal-Work/assets/110789514/7c35eb5e-f9c8-4c99-b3d3-163540df7435" width="800" alt="Wireframe">
-</div>
-
-<div align="center">
-  <p>After:</p>
-</div>
-    
-<div align="center">
-  <img src="https://github.com/sheraadams/C-OpenGL-Metal-Work/assets/110789514/5334d84c-96dc-48b0-9d5e-3c3d7ea70bd9" width="800" alt="Updated GUI">
-</div>
-
-<div align="center">
-  <p>With Imgui:</p>
-</div>
-    
-<div align="center">
-  <img src="https://github.com/sheraadams/C-OpenGL-Metal-Work/assets/110789514/98ed259c-cd4b-4376-8f8f-df1b1a77d3b4" width="800" alt="Updated GUI">
-</div>
-
-## The OpenGL Pipeline 
-<div align="center">
-  <img src="https://github.com/sheraadams/C-OpenGL-Metal-Work/assets/110789514/88a8047d-4105-41e8-8ec3-c06d9e55139f"
- width="900" alt="Screenshot: d4">
-</div>
-
+## The OpenGL Pipeline
 - Initialization
   - Include libraries
   - Define variables for the program
@@ -218,23 +190,11 @@ With ImGui, we can now resize and manipulate our objects with sliders and see th
 
 When we slide the xx slider to the right, the object becomes bigger on the horizontal axis. When we slide it to the left, it becomes smaller on the horizontal axis. When we slide the yy slider to the right, the object becomes bigger on the vertical axis. When we slide it to the left, the object becomes smaller on the vertical axis. 
 
-<div align="center">
-  <img src="https://github.com/sheraadams/C-OpenGL-Metal-Work/assets/110789514/0763faef-cd9d-421b-866a-49669b68eb7d" width="300"  alt="Screenshot: d4">
-</div>
-
-
 # Data Structures and Algorithms with OpenGL Vectors
 
 When considering the best data structure for texture scrolling for this application, I comared the vector, hash table, and binary search tree data structures in terms of access alone and for our Open GL program, insertion, deletion, and sorting will not likely be needed. In terms of access, the vector and array structures perform very well and have the average run-time space complexity of O(1). Hash table and binary search trees have higher overhead costs and require storage space for the structure itself. We also know that the binary search tree is great for cases when data sets are likely to grow, and fast searches are important and hash tables are best for small data sets in which fast searches are a priority. Since we are primarily concerned with access and will not need to search the textures, the vector is a strong choice. 
 
 For access, vectors have a worst-case runtime space complexity of O(N) where N is the number of elements in the vector and as we can see here, O(n) is generally fair to generally good space complexity and it is linear. Vectors offer advantages in terms of pure runtime and space complexity while the downside of vectors is that they are expensive in terms of memory allocation. To minimize our overall application overhead, we could incorporate the binary search trees for operations like collision detection.
-
-
-<div align="center">
-  <img src="https://github.com/sheraadams/C-OpenGL-Metal-Work/assets/110789514/7c97d37c-0c88-4db7-8f02-59c5115935c7" width="800" alt="Data Structures and Algorithms: d4">
-</div>
-
-Image Credit: (Eric Drowell, n.d.) 
 
 ## Texture Scrolling
 After we create our texture variables as: 
@@ -318,7 +278,7 @@ See that our textures are loaded as unsigned integers and are pushed back into a
     textures.push_back(metalTexture);
 ```
 
-We access our textures vector through an index (r or t). We can scroll through these textures with a key press (if desired, see the input function in this [repo](https://github.com/sheraadams/OpenGL-Sims-Mode), or through a slider with ImGui. 
+We access our textures vector through an index (r or t). We can scroll through these textures with a key press (if desired, see the input function or through a slider with ImGui. 
 ```cpp
         Objects book1;
         book1.link(sizeof(vertices), vertices);
@@ -356,7 +316,6 @@ We can scroll through these textures with a slider using ImGui as below:
         }
 ```
 Vectors are, many times, the data structure of choice for OpenGL. Vectors easily pass information back and forth from the shader and to functions. They can store information about vertices, coordinates, and textures. They also allow for easy linear transformations. 
-
 
 <div align="center">
   <p><strong>Proudly crafted with ❤️ by Shera Adams.</strong></p>
