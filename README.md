@@ -328,6 +328,9 @@ cd build
 cmake -G Xcode ..
 ```
 
+## References
+
+Check out my [references here](https://github.com/sc-adams/Cross-Platform-Game-Engine-CPP/edit/main/references.md).
 
 <div align="center">
   <p><strong>Proudly crafted with ❤️ by Shera Adams.</strong></p>
